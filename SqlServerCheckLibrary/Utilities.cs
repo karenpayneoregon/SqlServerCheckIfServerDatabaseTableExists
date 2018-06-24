@@ -33,7 +33,7 @@ namespace SqlServerCheckLibrary
                 await Task.Run(() =>
                 {
                     var sqlDataSourceEnumeratorInstance = SqlDataSourceEnumerator.Instance;
-                    DataTable dt = sqlDataSourceEnumeratorInstance.GetDataSources();
+                    var dt = sqlDataSourceEnumeratorInstance.GetDataSources();
                     if (dt != null)
                     {
                         if (dt.Rows.Count > 0)
@@ -42,7 +42,7 @@ namespace SqlServerCheckLibrary
                                 .AsEnumerable()
                                 .FirstOrDefault
                                     (
-                                        r => r.Field<string>("ServerName") == pServerName.ToUpper()
+                                        dataRow => dataRow.Field<string>("ServerName") == pServerName.ToUpper()
                                     );
 
                             success = row != null;
