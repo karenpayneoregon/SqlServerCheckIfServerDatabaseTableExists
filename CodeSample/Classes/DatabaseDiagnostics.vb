@@ -31,7 +31,8 @@ Namespace Classes
             End Get
         End Property
         ''' <summary>
-        ''' Check if server, database and tables exists.
+        ''' Setup server and database (catalog) which are used in the 
+        ''' CheckServerDatabase method below.
         ''' </summary>
         ''' <param name="pServerName">Server name to check if exists</param>
         ''' <param name="pCatalog">Catalog to check if exists on pServerName</param>
@@ -39,7 +40,11 @@ Namespace Classes
             _mServerName = pServerName
             _mCatalog = pCatalog
         End Sub
-        Public Async Function Check() As Task(Of Boolean)
+        ''' <summary>
+        ''' Check to see if the server and database are available
+        ''' </summary>
+        ''' <returns></returns>
+        Public Async Function CheckServerDatabase() As Task(Of Boolean)
 
             Try
                 Dim checker As New Utilities

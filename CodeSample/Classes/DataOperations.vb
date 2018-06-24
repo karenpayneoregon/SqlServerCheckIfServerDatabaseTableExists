@@ -44,7 +44,7 @@ Public Class DataOperations
         ' this section checks to see if the server and catalog exists
         Dim diag As New DatabaseDiagnostics(Server, DefaultCatalog)
 
-        If Not Await diag.Check Then
+        If Not Await diag.CheckServerDatabase Then
 
             If Not String.IsNullOrWhiteSpace(diag.Errors) Then
                 mDiagnosticErrors = diag.Errors
@@ -114,7 +114,7 @@ Public Class DataOperations
         Dim reportList As New List(Of Report)
 
 
-        ' this section checks to see if the server and catalog exists
+        ' this section checks to see if the server and catalog exists via the method Check
         Dim diag As New DatabaseDiagnostics(Server, DefaultCatalog)
 
 
