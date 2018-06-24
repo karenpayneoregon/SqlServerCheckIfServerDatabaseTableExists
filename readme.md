@@ -1,0 +1,1 @@
+This is source code for https://social.technet.microsoft.com/wiki/contents/articles/51638.net-defensive-data-programming-part-3.aspx

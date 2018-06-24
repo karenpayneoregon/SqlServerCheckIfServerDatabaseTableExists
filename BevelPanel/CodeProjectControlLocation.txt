@@ -1,0 +1,3 @@
+﻿Source https://www.codeproject.com/Tips/1200547/Beveled-Panel-with-Shadow-Effect
+A panel that has rounded borders, gradients, edges/bevels and a shadow
+By Yury Yuhno, 8 Aug 2017
